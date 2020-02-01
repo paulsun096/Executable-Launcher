@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +11,13 @@ namespace GameLauncher
     {
         public void PlayGame()
         {
-            Process.Start("C:/Users/Mike/AppData/Roaming/Microsoft/Windows/Start Menu/Programs/Steam/cuphead.url");
+            ProcessStartInfo proc_info = new ProcessStartInfo();
+            proc_info.CreateNoWindow = false;
+            proc_info.WindowStyle = ProcessWindowStyle.Normal;
+            proc_info.FileName = @"C:";
+
+
+            Process.Start(proc_info);
         }
         
         public void LaunchWebsite(string url)
